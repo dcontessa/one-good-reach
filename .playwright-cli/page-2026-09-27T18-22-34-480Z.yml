@@ -1,0 +1,24 @@
+- generic [ref=e53]:
+  - generic [ref=e54]:
+    - generic [ref=e55]:
+      - generic [ref=e56]: ONE GOOD REACH
+      - generic [ref=e57]: Good morning
+    - button "Settings" [ref=e58] [cursor=pointer]
+  - generic [ref=e60]:
+    - generic [ref=e61]: Today's check-in
+    - generic [ref=e62]: A short Soul, Mind, Body check-in helps find one good reach for today.
+    - button "Start check-in" [ref=e63] [cursor=pointer]
+  - generic [ref=e65]:
+    - button "History and connection map" [ref=e66] [cursor=pointer]:
+      - generic [ref=e67]:
+        - generic [ref=e68]: History
+        - generic [ref=e69]: 0 check-ins, 0 reaches
+    - button "Connection map" [ref=e70] [cursor=pointer]:
+      - generic [ref=e71]:
+        - generic [ref=e72]: Connections
+        - generic [ref=e73]: 0 people you reached
+  - generic [ref=e75]:
+    - generic [ref=e76]: Premium
+    - generic [ref=e78]: Go deeper when you are ready
+    - generic [ref=e79]: Personalized journeys, deeper pattern insights, and difficult-conversation preparation.
+    - button "See what is included" [ref=e80] [cursor=pointer]

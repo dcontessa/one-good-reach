@@ -1,0 +1,11 @@
+- generic [ref=e9]:
+  - generic [ref=e12]:
+    - generic [ref=e13]: ONE GOOD REACH
+    - generic [ref=e16]:
+      - generic [ref=e17]: Private by design
+      - generic [ref=e18]: Your reflections stay yours. We never send messages for you, and you stay in control of every word.
+    - generic "Step 3 of 3" [ref=e31]
+    - generic [ref=e23]: A wellbeing and relationship-support tool. Not therapy, diagnosis, or crisis care.
+  - generic [ref=e25]:
+    - button "Get started" [active] [ref=e32] [cursor=pointer]
+    - button "Back" [ref=e29] [cursor=pointer]

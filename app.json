@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "One Good Reach",
+    "slug": "one-good-reach",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "onegoodreach",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FBF7F1"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.onegoodreach.app",
+      "buildNumber": "1"
+    },
+    "android": {
+      "package": "com.onegoodreach.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FBF7F1"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-dev-client"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
