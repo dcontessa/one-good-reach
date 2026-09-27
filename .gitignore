@@ -37,3 +37,4 @@ yarn-error.*
 
 # Testing
 coverage/
+.playwright-cli/
