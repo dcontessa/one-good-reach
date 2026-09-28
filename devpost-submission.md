@@ -131,7 +131,7 @@ One Good Reach uses a freemium subscription model powered by RevenueCat. The cor
 ## TODO Official Form Fields
 
 - Includes App Icon: Yes, after the 1024 × 1024 icon is attached
-- Includes screenshot: Yes, after the 1179 × 2556 screenshot is attached
+- Includes screenshot: Yes. A 1179 × 2556 screenshot without a device frame is attached to the Devpost gallery.
 - First Version Date Confirmation: Yes, only after the public Google Play release is verified
 - Is Staff or Sponsor: No
 - App type: Android

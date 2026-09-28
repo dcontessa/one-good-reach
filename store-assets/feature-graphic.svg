@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <rect width="1024" height="500" fill="#FBF7F1"/>
+  <circle cx="863" cy="64" r="176" fill="#F5E5DD"/>
+  <circle cx="924" cy="430" r="222" fill="#F0E8DA"/>
+  <g transform="translate(72 88)">
+    <rect width="324" height="324" rx="76" fill="#FFFDFC" stroke="#E4D8CE" stroke-width="3"/>
+    <path d="M65 215C65 145 115 92 178 92C184 92 191 93 198 94C167 115 147 149 147 188C147 221 161 250 184 270C117 268 65 247 65 215Z" fill="#C95F3A"/>
+    <path d="M259 109C259 179 209 232 146 232C140 232 133 231 126 230C157 209 177 175 177 136C177 103 163 74 140 54C207 56 259 77 259 109Z" fill="#5A234C"/>
+    <circle cx="162" cy="162" r="18" fill="#FBF7F1"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#2E2926">
+    <text x="448" y="204" font-size="58" font-weight="700">One Good Reach</text>
+    <text x="451" y="263" font-size="29" fill="#6D625C">One small action.</text>
+    <text x="451" y="303" font-size="29" fill="#6D625C">One real connection.</text>
+  </g>
+  <rect x="451" y="340" width="184" height="10" rx="5" fill="#C95F3A"/>
+</svg>
