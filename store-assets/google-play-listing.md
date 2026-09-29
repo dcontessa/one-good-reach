@@ -67,11 +67,11 @@ Lifestyle
 
 ## Contact email
 
-TODO: Confirm the public support email to display on Google Play.
+dcontessa100@gmail.com
 
 ## Privacy policy URL
 
-TODO: Publish the privacy policy and add its public URL.
+https://dcontessa.github.io/one-good-reach/privacy.html
 
 ## Required graphics
 

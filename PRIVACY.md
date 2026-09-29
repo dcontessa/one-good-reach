@@ -47,4 +47,4 @@ We may update this policy as the app evolves. The effective date above will be u
 
 ## Contact
 
-TODO: Add the public support email before publishing this policy.
+dcontessa100@gmail.com
