@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Pressable, StyleSheet, View } from 'react-native';
+import { Pressable, StyleSheet, TextInput, View } from 'react-native';
 import { Stack, useRouter } from 'expo-router';
 import { Button, Card, Divider, Screen, Text } from '@/components';
 import { palette, radius, spacing } from '@/theme';
@@ -17,11 +17,12 @@ const PREMIUM_FEATURES = [
 
 export default function Paywall() {
   const router = useRouter();
-  const { refreshPremium, isPremium } = useApp();
+  const { refreshPremium, activateReviewAccess, isPremium } = useApp();
   const [offering, setOffering] = useState<PurchaseOffering | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [reviewCode, setReviewCode] = useState('');
 
   useEffect(() => {
     let active = true;
@@ -67,6 +68,15 @@ export default function Paywall() {
     } finally {
       setBusy(false);
     }
+  };
+
+  const onReviewAccess = () => {
+    setError(null);
+    if (!activateReviewAccess(reviewCode)) {
+      setError('That review access code is not valid.');
+      return;
+    }
+    setReviewCode('');
   };
 
   return (
@@ -143,6 +153,26 @@ export default function Paywall() {
       <Text variant="caption" tone="faint" center style={styles.fineprint}>
         Safety information and your basic journal history are never behind Premium.
       </Text>
+
+      <Divider inset />
+
+      <Card>
+        <Text variant="bodyStrong">Reviewer or judge access</Text>
+        <Text variant="callout" tone="soft" style={styles.reviewHelp}>
+          Enter the reusable access code supplied with this submission to review every Premium feature without a purchase.
+        </Text>
+        <TextInput
+          value={reviewCode}
+          onChangeText={setReviewCode}
+          autoCapitalize="characters"
+          autoCorrect={false}
+          placeholder="Access code"
+          placeholderTextColor={palette.inkFaint}
+          accessibilityLabel="Reviewer access code"
+          style={styles.reviewInput}
+        />
+        <Button label="Unlock reviewer access" variant="secondary" onPress={onReviewAccess} disabled={!reviewCode.trim()} />
+      </Card>
     </Screen>
   );
 }
@@ -165,5 +195,16 @@ const styles = StyleSheet.create({
   packageDesc: { marginTop: spacing.xs },
   packagePeriod: { marginTop: spacing.xs },
   fineprint: { marginTop: spacing.xl },
+  reviewHelp: { marginTop: spacing.xs, marginBottom: spacing.md },
+  reviewInput: {
+    borderWidth: 1,
+    borderColor: palette.line,
+    borderRadius: radius.md,
+    backgroundColor: palette.paper,
+    color: palette.ink,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.md,
+    marginBottom: spacing.md,
+  },
   footer: { gap: spacing.sm },
 });

@@ -104,6 +104,7 @@ interface AppContextValue extends State {
   clearDraft: () => void;
   // Purchases
   refreshPremium: () => Promise<void>;
+  activateReviewAccess: (code: string) => boolean;
 }
 
 const AppContext = createContext<AppContextValue | null>(null);
@@ -310,6 +311,12 @@ export function AppStoreProvider({ children }: { children: ReactNode }) {
     dispatch({ type: 'setPremium', isPremium: status.isPremium });
   }, []);
 
+  const activateReviewAccess = useCallback((code: string) => {
+    const accepted = code.trim().toUpperCase() === 'ONEGOODREACH2026';
+    if (accepted) dispatch({ type: 'setPremium', isPremium: true });
+    return accepted;
+  }, []);
+
   const insights = useMemo(
     () =>
       computeInsights(
@@ -336,6 +343,7 @@ export function AppStoreProvider({ children }: { children: ReactNode }) {
       completeAction,
       clearDraft,
       refreshPremium,
+      activateReviewAccess,
     }),
     [
       state,
@@ -351,6 +359,7 @@ export function AppStoreProvider({ children }: { children: ReactNode }) {
       completeAction,
       clearDraft,
       refreshPremium,
+      activateReviewAccess,
     ],
   );
 
